@@ -6,7 +6,11 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello World')
-})
+});
+
+app.get('/about', (req, res) => {
+  res.send('About route 🎉 ')
+});
 
 app.post('/api/getdecryptedkey', (request, response) => {
     console.log("Request Body", request.body);
