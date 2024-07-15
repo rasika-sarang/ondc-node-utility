@@ -4,6 +4,10 @@ const crypto = require('crypto');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
 app.post('/api/getdecryptedkey', (request, response) => {
     console.log("Request Body", request.body);
     const privateKey1 = crypto.createPrivateKey({
